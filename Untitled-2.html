@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍭Paletitas Oreo🍪</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 2.8;
+      padding: 2.8;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffb347;
+    }
+
+    .hero {
+      background-image: url("https://i.blogs.es/319c65/como-hacer-paletas-de-galleta-oreo-2-/840_560.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 3rem;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .productos {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .productos h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .grid-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .Integrantes {
+      background-color: rgb(19, 19, 19);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .producto h3 {
+      margin: 15px 0 10px;
+    }
+
+    .producto p {
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .btn-comprar {
+      display: inline-block;
+      background-color: #ffb347;
+      color: #222;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .btn-comprar:hover {
+      background-color: #ffcc70;
+    }
+
+    footer {
+      background-color: #141414;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<script src="script.js"></script>
+
+
+<body style="background-color: #242424;">
+
+  <header>
+    <h2 style="background-color: #afa391;"><a href="https://www.youtube.com/watch?v=NEUxko--jo0" style="color: #ffffff;">Modelo de negocios: 🍭Paletitas Oreo🍪</a></h2>
+    <h1>🍭Paletitas Oreo🍪</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#integrantes">Integrantes</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2 style="background-color: #222;">Las paletas más deliciosas hechas con amor y Oreos 💖</h2>
+  </section>
+
+  <section class="productos" id="productos", style="background-color: #222;">
+    <h2 style="color: #fafafa;">Nuestros Sabores</h2>
+    <div class="grid-productos">
+      <div class="producto">
+        <img src="data:image/jpeg;base64,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" alt="Paleta Oreo Clásica">
+        <h3>Paleta Oreo Clásica</h3>
+        <p>La original Cremosa, dulce y llena de trozos de Oreo.</p>
+      </div>
+
+      <div class="producto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqWqUWvEnw-ZlcZsDN9xsQooFmT-Zsr34bQQ&s" alt="Paleta Oreo Chocolate">
+        <h3>Paleta Oreo Con Cafe</h3>
+        <p>Con, más felicidad.</p>
+      </div>
+
+      <div class="producto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpHPxggVHI9aXj15Iu8RT0-cm65UV49ni8g&s" alt="Paleta Oreo Vainilla">
+        <h3>Paleta Oreo Vainilla</h3>
+        <p>Suave sabor a vainilla con el toque crujiente de Oreo.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="integrantes" class="Integrantes">
+    <h3>Paletitas Oreo</h3>
+    <div><h2 style="background-color: #ffffff3b;">INTEGRANTES</h2></div>
+    <h4>Balmes Natan Arriola Hernandez
+      <div>
+      Johan Alejandro Hernández Urquilla
+      <div>
+        Juan Aandres Araujo Perez
+    </h4>
+    <p>2025  Paletitas Oreo</p>
+    <p>Actividad Evaluada [Informatica]</p>
+    <h5>Margen de pagina: 2.8 (Ancho y Alto)
+      <div>
+    </h5>
+  </footer>
+
+  <script>
+    function Video(IrVid) {
+      alert("Fue: " + nombre + " 🍪");
+    }
+
+  </script>
+
+</body>
+</html>
